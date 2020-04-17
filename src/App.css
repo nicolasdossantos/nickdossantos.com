@@ -1,0 +1,131 @@
+.App {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+  
+}
+body {
+  background-color: #282c34;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.github-tile {
+  background-color: white;
+  width: 64;
+  height: 64;
+}
+
+.ra {
+  float:right;
+  
+}
+.hex {
+  width: 160px;
+}
+.skills {
+  width: 100px;
+  stroke: white;
+}
+
+.phone {
+  color: white;
+  font-size: 50pt;
+  
+}
+
+
+#profile-pic {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.landing-page-text{
+  text-align: center;
+  font-size: 40pt;
+  
+}
+.pld {
+  padding-left: 15pt;
+}
+
+.pbd {
+  padding-bottom: 15pt;
+}
+
+.pbl {
+  padding-bottom: 30pt;
+}
+
+.pbs {
+  padding-bottom: 5pt;
+}
+
+.prd {
+  padding-right: 15pt;
+}
+
+.ptd {
+  padding-top: 15pt;
+}
+
+.ptl {
+  padding-top: 30pt;
+}
+
+.pll {
+  padding-left: 30pt;
+}
+.plxl {
+  padding-left: 45pt;
+}
+
+.pbxl {
+    padding-bottom: 45pt;
+}
+.ptxl {
+  padding-top: 45pt;
+}
+
+.body-text {
+  font-size: 18pt;
+}
+
+.title {
+  font-size: 40pt;
+}
+
+.subtitle {
+  font-size: 25pt;
+}
+
+.menu {
+  padding: 15pt;
+  color: #AAAFB4;
+  font-size: 18pt;
+  border: white solid 1pt;
+  width: fit-content;
+}
+
+.selected {
+  color: white;
+}
+
+#name{
+  color:#ff6961;
+  font-weight: 600;
+}
+
+.landing-page {
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
