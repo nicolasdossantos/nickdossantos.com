@@ -8,13 +8,10 @@
 body {
   background-color: #282c34;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:white;
 }
 
-.github-tile {
-  background-color: white;
-  width: 64;
-  height: 64;
-}
+
 
 .ra {
   float:right;
@@ -86,6 +83,28 @@ body {
 .ptxl {
   padding-top: 45pt;
 }
+.mts {
+  margin-top: 5pt;
+}
+.mbd {
+  margin-bottom: 15pt;
+}
+.mbs {
+  margin-bottom: 5pt;
+}
+.mtd {
+  margin-top: 15pt;
+}
+.mtl {
+  margin-top: 30pt;
+}
+.mtxl {
+  margin-top: 45pt;
+}
+
+.mbl {
+  margin-bottom: 30pt;
+}
 
 .body-text {
   font-size: 18pt;
@@ -97,6 +116,9 @@ body {
 
 .subtitle {
   font-size: 25pt;
+}
+.bold {
+  font-weight: bold;
 }
 
 .menu {
@@ -127,5 +149,25 @@ body {
   flex-direction: column;
 }
 
+#contactForm {
+  width: 30rem;
+  border: 1px solid white;
+}
+
+.smallTray {
+  width: 20px;
+}
+
+.hrClass {
+  border-color: white;
+}
+
+.whiteText {
+  color: white;
+}
+
+.right-float {
+  float: right;
+}
 
 

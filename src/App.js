@@ -3,16 +3,18 @@ import "./App.css";
 
 import LadingPage from "./components/LandingPage";
 import Education from "./components/Education";
-import Menu from "./components/Menu";
 import Skills from "./components/Skills"
+import ProjectCard from "./components/ProjectCard";
+import ContactCard from "./components/ContactCard";
 
 function App() {
   return (
     <>
-    
-   <LadingPage className="pbxl"/>
-   <Education/> 
-   <Skills />
+    <ContactCard/>
+    {/* <ProjectCard></ProjectCard>  */}
+    {/* <LadingPage className="pbxl"/> */}
+   {/* <Education/> 
+   <Skills /> */}
   
    </>
   );

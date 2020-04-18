@@ -1,12 +1,14 @@
 import React from 'react'
-import { EmailIcon, LinkedinIcon, Git } from "react-share"
+import { EmailIcon, LinkedinIcon } from "react-share"
 
-export default function ContactTray() {
+export default function ContactTray({size="default"}) {
+    const width = size === "small" ? "50px" : "64px"
     return (
         <div className="row">
-        <EmailIcon></EmailIcon>
-        <LinkedinIcon/>
-        <div className="github-tile"><img src="gittile copy.jpg" width="64px"/></div>
+        <EmailIcon width={width}></EmailIcon>
+        <LinkedinIcon width={width}/>
+        {size === "small" && <img src="gittile copy.jpg" className="mts" width={width} height={width}/>}
+        {size !== "small" && <img src="gittile copy.jpg" width={width} height={width}/>}
             
         </div>
     )
