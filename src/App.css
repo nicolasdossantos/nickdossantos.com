@@ -1,3 +1,9 @@
+body {
+  background-color: #282c34;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:white;
+}
+
 .App {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
@@ -5,13 +11,6 @@
   min-height: 100vh;
   
 }
-body {
-  background-color: #282c34;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color:white;
-}
-
-
 
 .ra {
   float:right;
@@ -24,19 +23,21 @@ body {
   width: 100px;
   stroke: white;
 }
-
+.skillsInCard {
+  width: 25px;
+  stroke: white;
+  margin-right: 5px;
+  padding-bottom: 10px;
+}
 .phone {
   color: white;
   font-size: 50pt;
   
 }
-
-
 #profile-pic {
   width: 150px;
   border-radius: 50%;
 }
-
 .landing-page-text{
   text-align: center;
   font-size: 40pt;
@@ -101,6 +102,9 @@ body {
 .mtxl {
   margin-top: 45pt;
 }
+.mrd {
+  margin-right: 15pt;
+}
 
 .mbl {
   margin-bottom: 30pt;
@@ -127,6 +131,12 @@ body {
   font-size: 18pt;
   border: white solid 1pt;
   width: fit-content;
+}
+
+#findMore {
+  padding: 15pt;
+  color: #AAAFB4;
+  font-size: 18pt;
 }
 
 .selected {
@@ -170,4 +180,32 @@ body {
   float: right;
 }
 
+.projectCard {
+  background-color: #282c34 !important;
+}
 
+.popOverTitle{
+  color: white;
+  background-color:#6C757D
+}
+
+.popOverBody {
+  background-color: black;
+  color: white;
+}
+
+.stars {
+  color: goldenrod
+}
+.pop {
+  width: 250px;
+  
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.icon {
+  padding-right: 5px;
+}

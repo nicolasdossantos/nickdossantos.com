@@ -1,6 +1,7 @@
 import React from "react";
 import Typing from "react-typing-animation";
 import ContactTray from "./ContactTray";
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default function LadingPage() {
   return (
@@ -16,9 +17,11 @@ export default function LadingPage() {
             Full-stack software engineer
           </div>
         </Typing>
-        <button className="btn btn-outline-secondary text-white body-text bold float-right">
-          Go To Interactive Resume
-        </button>
+        <Link to="education" spy={true} smooth={true}  duration={400}>
+          <button className="btn btn-outline-secondary text-white body-text bold float-right">
+            Go To Interactive Resume
+          </button>
+        </Link>
       </header>
     </div>
   );

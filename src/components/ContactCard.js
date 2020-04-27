@@ -1,13 +1,13 @@
 import React from "react";
 import ContactTray from "./ContactTray";
 
-export default function ContactCard() {
+export default function ContactCard({handleContact}) {
   return (
     <div id="contactForm" className="container mtl mbl">
       <div className="row">
         <div className="col-11 title">Contact Me</div>
-        <button type="button" className="close whiteText" ariaLabel="Close">
-          <span ariaHidden="true">&times;</span>
+        <button type="button" className="close whiteText" aria-label="Close" onClick={handleContact}>
+          <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <hr className="hrClass" />
