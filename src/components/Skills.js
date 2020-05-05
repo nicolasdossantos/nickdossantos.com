@@ -5,8 +5,7 @@ import { Popover, OverlayTrigger } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
 
-export default function Skills() {
-
+export default function Skills({ handleResume, handleContact }) {
   const [skill, setSkill] = React.useState({
     skillName: "Kotlin",
     proficiency: 4.5,
@@ -14,7 +13,6 @@ export default function Skills() {
   });
 
   const popover = (
-  
     <Popover id="popover-basic" className="pop">
       <Popover.Title as="h3" className="popOverTitle">
         <div className="bold">{skill.skillName}</div>
@@ -69,21 +67,20 @@ export default function Skills() {
 
         <div className="bold">Projects:&nbsp;</div>
         <ul>
-          {skill.projects.map((project) => (
-            <li>{project}</li>
+          {skill.projects.map((project, index) => (
+            <li key={index}>{project}</li>
           ))}
         </ul>
       </Popover.Content>
     </Popover>
   );
- 
+
   return (
     <>
       <div className="App container">
-        <div className="title">Skills</div>
-        <div className="subtitle">
-        Click the hexagons to learn more{" "}
-        </div>
+        <div className="title col-9">Skills</div>
+
+        <div className="subtitle">Click the tiles to learn more </div>
 
         <div className="row ptl">
           <div className="col-9">
@@ -283,7 +280,11 @@ export default function Skills() {
                     setSkill({
                       skillName: "Jest",
                       proficiency: 4,
-                      projects: ["Parts Visibility", "VPM","Interactive Resume"],
+                      projects: [
+                        "Parts Visibility",
+                        "VPM",
+                        "Interactive Resume",
+                      ],
                     });
                   }}
                 >
@@ -304,7 +305,11 @@ export default function Skills() {
                     setSkill({
                       skillName: "Enzyme",
                       proficiency: 4,
-                      projects: ["Parts Visibility", "VPM", "Interactive Resume"],
+                      projects: [
+                        "Parts Visibility",
+                        "VPM",
+                        "Interactive Resume",
+                      ],
                     });
                   }}
                 >
@@ -315,12 +320,12 @@ export default function Skills() {
                   />
                 </OverlayTrigger>
               </div>
-             
+
               <div className="col-1"></div>
             </div>
             <div className="row pbl">
               <div className="col-2"></div>
-              
+
               <div className="col-2 skills">
                 <OverlayTrigger
                   trigger="click"
@@ -331,7 +336,7 @@ export default function Skills() {
                     setSkill({
                       skillName: "JUnit",
                       proficiency: 4,
-                      projects: ["LM Wisdom", "Parts Visibility", "VPM"], 
+                      projects: ["LM Wisdom", "Parts Visibility", "VPM"],
                     });
                   }}
                 >
@@ -407,11 +412,10 @@ export default function Skills() {
               </div>
               <div className="col-2"></div>
             </div>
-            
           </div>
 
           <div className="col-3">
-            <Menu selected="skills" />
+            <Menu selected="skills" handleResume={handleResume} handleContact={handleContact} />
           </div>
         </div>
       </div>

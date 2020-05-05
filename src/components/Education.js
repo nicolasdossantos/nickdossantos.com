@@ -2,7 +2,7 @@ import React from "react";
 import Hexagon from "react-hexagon";
 import Menu from "./Menu";
 
-export default function Education() {
+export default function Education( {handleResume, handleContact} ) {
   return (
     <div className="App container">
       <div className="title pbl">Education</div>
@@ -27,7 +27,7 @@ export default function Education() {
           </ul>
         </div>
         <div className="col-3">
-          <Menu selected="education" />
+          <Menu selected="education"  handleResume={handleResume} handleContact={handleContact}/>
         </div>
       </div>
       <div className="subtitle pbd"> > Relevant Coursework</div>

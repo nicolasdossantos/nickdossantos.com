@@ -1,7 +1,8 @@
 import React from "react";
 import Hexagon from "react-hexagon";
+import ReactTooltip from "react-tooltip";
 
-export default function ProjectCard({ project = {} }) {
+export default function ProjectCard({ project = {}, isProfessional=false }) {
   return (
     <div className="projectCard">
       <div
@@ -11,47 +12,61 @@ export default function ProjectCard({ project = {} }) {
         <div className="card-body">
           <div className="row">
             <h4 className="card-title bold col-7">{project.name}</h4>
+
             {project.tech.includes("vue") && (
-              <Hexagon
-                style={{ stroke: "white" }}
-                backgroundImage="/vue.jpg"
-                className="skillsInCard "
-              />
+              <a href="/#" data-for="all" data-tip="VueJS" data-iscapture="true">
+                <Hexagon
+                  style={{ stroke: "white" }}
+                  backgroundImage="/vue.jpg"
+                  className="skillsInCard "
+                />
+              </a>
             )}
+
             {project.tech.includes("nodejs") && (
-              <Hexagon
-                style={{ stroke: "white" }}
-                backgroundImage="/node.jpg"
-                className="skillsInCard"
-              />
+              <a href="/#" data-for="all" data-tip="NodeJS" data-iscapture="true">
+                <Hexagon
+                  style={{ stroke: "white" }}
+                  backgroundImage="/node.jpg"
+                  className="skillsInCard"
+                />
+              </a>
             )}
             {project.tech.includes("mongodb") && (
-              <Hexagon
-                style={{ stroke: "white" }}
-                backgroundImage="/mongodb.jpg"
-                className="skillsInCard"
-              />
+              <a href="/#" data-for="all" data-tip="MongoDB" data-iscapture="true">
+                <Hexagon
+                  style={{ stroke: "white" }}
+                  backgroundImage="/mongodb.jpg"
+                  className="skillsInCard"
+                />
+              </a>
             )}
             {project.tech.includes("python") && (
-              <Hexagon
-                style={{ stroke: "white" }}
-                backgroundImage="/python.jpg"
-                className="skillsInCard"
-              />
+              <a  href="/#" data-for="all" data-tip="Python" data-iscapture="true">
+                <Hexagon
+                  style={{ stroke: "white" }}
+                  backgroundImage="/python.jpg"
+                  className="skillsInCard"
+                />
+              </a>
             )}
             {project.tech.includes("firebase") && (
-              <Hexagon
-                style={{ stroke: "white" }}
-                backgroundImage="/firebase.jpg"
-                className="skillsInCard"
-              />
+              <a data-for="all" href="/#" data-tip="Firebase" data-iscapture="true">
+                <Hexagon
+                  style={{ stroke: "white" }}
+                  backgroundImage="/firebase.jpg"
+                  className="skillsInCard"
+                />
+              </a>
             )}
             {project.tech.includes("react") && (
-              <Hexagon
-                style={{ stroke: "white" }}
-                backgroundImage="/react.jpg"
-                className="skillsInCard"
-              />
+              <a data-for="all" href="/#" data-tip="React" data-iscapture="true">
+                <Hexagon
+                  style={{ stroke: "white" }}
+                  backgroundImage="/react.jpg"
+                  className="skillsInCard"
+                />
+              </a>
             )}
           </div>
           <div>{project.shortDescription}</div>
@@ -64,17 +79,35 @@ export default function ProjectCard({ project = {} }) {
         <div className="card-body">
           <h5 className="card-title bold">{project.role}</h5>
           <p className="card-text">{project.roleDescription}</p>
-          <div className="row">
-            <button className="btn btn-outline-light text-black body-text-small bold mbs mrd ">
-              Website
-            </button>
-            <button className="btn btn-outline-light text-black body-text-small bold mbs">
-              Learn More
-            </button>
-            <div className="col-2"></div>
-          </div>
+            {!isProfessional &&
+              <div className="row">
+                <button className="btn btn-outline-light text-black body-text-small bold mbs mrd ">
+                  Website
+                </button>
+                <button className="btn btn-outline-light text-black body-text-small bold mbs">
+                  Learn More
+                </button>
+                <div className="col-2"></div>
+              </div>
+            }
+            {
+              isProfessional &&
+             
+                <button className="btn btn-outline-light text-black body-text-small bold mbs mrd ">
+                  See My Accomplishments
+                </button>
+               
+             
+            }
         </div>
       </div>
+      <ReactTooltip
+        id="all"
+        place="top"
+        type="dark"
+        effect="float"
+        multiline={true}
+      />
     </div>
   );
 }

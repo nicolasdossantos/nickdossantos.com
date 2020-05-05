@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "./Menu";
 import ProjectCard from "./ProjectCard";
 
-export default function Projects() {
+export default function Projects( {handleResume, handleContact} ) {
   let hackgile = {
     name: "HackGile",
     shortDescription:
@@ -16,7 +16,7 @@ export default function Projects() {
   let mspi = {
     name: "MSPi",
     shortDescription:
-      "Agile Project Manager for Hackathons and School Projects",
+      "A Raspberry Pi smart security camera",
     image: "mspi.jpg",
     imageAlt: "mspiImage",
     role: "Co-Creator",
@@ -60,11 +60,11 @@ export default function Projects() {
           </div>
         </div>
         <div className="col-3">
-          <Menu selected="projects" />
+          <Menu selected="projects" handleResume={handleResume} handleContact={handleContact}/>
           <div id="findMore">
             <div className="">Find More</div>
             <div id="gitImage">
-              <img src="githubContact.jpg" width="200px" alt="" />
+              <a href="https://github.com/nicolasdossantos" target="_blank" rel="noopener noreferrer"><img src="githubContact.jpg" width="200px" alt="" /></a>
             </div>
           </div>
         </div>

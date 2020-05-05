@@ -1,12 +1,17 @@
 import React from "react";
 import ContactTray from "./ContactTray";
 
-export default function ContactCard({handleContact}) {
+export default function ContactCard({ handleContact }) {
   return (
     <div id="contactForm" className="container mtl mbl">
       <div className="row">
         <div className="col-11 title">Contact Me</div>
-        <button type="button" className="close whiteText" aria-label="Close" onClick={handleContact}>
+        <button
+          type="button"
+          className="close whiteText"
+          aria-label="Close"
+          onClick={handleContact}
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -14,7 +19,7 @@ export default function ContactCard({handleContact}) {
 
       <form>
         <div className="form-group">
-          <label for="exampleFormControlInput1">Name</label>
+          <label>Name</label>
           <input
             type="text"
             className="form-control"
@@ -24,7 +29,7 @@ export default function ContactCard({handleContact}) {
         </div>
 
         <div className="form-group">
-          <label for="exampleFormControlInput1">Email</label>
+          <label>Email</label>
           <input
             type="email"
             className="form-control"
@@ -34,7 +39,7 @@ export default function ContactCard({handleContact}) {
         </div>
 
         <div className="form-group">
-          <label for="exampleFormControlTextarea1">Message</label>
+          <label>Message</label>
           <textarea
             className="form-control"
             id="exampleFormControlTextarea1"

@@ -23,6 +23,10 @@ body {
   width: 100px;
   stroke: white;
 }
+.experience {
+  width: 80px;
+  stroke: white;
+}
 .skillsInCard {
   width: 25px;
   stroke: white;
@@ -139,8 +143,18 @@ body {
   font-size: 18pt;
 }
 
+.expPeriod {
+  padding: 15pt;
+  color: white;
+  font-size: 18pt;
+}
 .selected {
   color: white;
+}
+
+.menuItem:active {
+  color: white;
+  border: 0px;
 }
 
 #name{
@@ -208,4 +222,19 @@ body {
 
 .icon {
   padding-right: 5px;
+}
+
+.close-btn {
+  color: #6C757D;
+  background-color: transparent;
+  border: 1pt solid white;
+  font-size: 30pt;
+  cursor:pointer
+
+}
+
+.close-btn:active {     
+  color: white;
+  font-weight: bold;    
+  
 }
