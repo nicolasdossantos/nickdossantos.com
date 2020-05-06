@@ -1,8 +1,8 @@
-import React from "react";
-import { EmailIcon, LinkedinIcon } from "react-share";
+import React from 'react'
+import { EmailIcon, LinkedinIcon } from 'react-share'
 
 export default function ContactTray({ size = "default" }) {
-  const width = size === "small" ? "50px" : "64px";
+  const width = size === "small" ? "50px" : "64px"
   return (
     <div className="row">
       <a href="mailto:contact@nickdossantos.com">
@@ -40,5 +40,5 @@ export default function ContactTray({ size = "default" }) {
         </a>
       )}
     </div>
-  );
+  )
 }

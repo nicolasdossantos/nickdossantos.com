@@ -1,6 +1,6 @@
-import React from "react";
-import Hexagon from "react-hexagon";
-import ReactTooltip from "react-tooltip";
+import React from 'react'
+import Hexagon from 'react-hexagon'
+import ReactTooltip from 'react-tooltip'
 
 export default function ProjectCard({ project = {}, isProfessional=false }) {
   return (
@@ -13,7 +13,7 @@ export default function ProjectCard({ project = {}, isProfessional=false }) {
           <div className="row">
             <h4 className="card-title bold col-7">{project.name}</h4>
 
-            {project.tech.includes("vue") && (
+            {project.tech.includes('vue') && (
               <a href="/#" data-for="all" data-tip="VueJS" data-iscapture="true">
                 <Hexagon
                   style={{ stroke: "white" }}
@@ -23,7 +23,7 @@ export default function ProjectCard({ project = {}, isProfessional=false }) {
               </a>
             )}
 
-            {project.tech.includes("nodejs") && (
+            {project.tech.includes('nodejs') && (
               <a href="/#" data-for="all" data-tip="NodeJS" data-iscapture="true">
                 <Hexagon
                   style={{ stroke: "white" }}
@@ -32,7 +32,7 @@ export default function ProjectCard({ project = {}, isProfessional=false }) {
                 />
               </a>
             )}
-            {project.tech.includes("mongodb") && (
+            {project.tech.includes('mongodb') && (
               <a href="/#" data-for="all" data-tip="MongoDB" data-iscapture="true">
                 <Hexagon
                   style={{ stroke: "white" }}
@@ -41,7 +41,7 @@ export default function ProjectCard({ project = {}, isProfessional=false }) {
                 />
               </a>
             )}
-            {project.tech.includes("python") && (
+            {project.tech.includes('python') && (
               <a  href="/#" data-for="all" data-tip="Python" data-iscapture="true">
                 <Hexagon
                   style={{ stroke: "white" }}
@@ -50,7 +50,7 @@ export default function ProjectCard({ project = {}, isProfessional=false }) {
                 />
               </a>
             )}
-            {project.tech.includes("firebase") && (
+            {project.tech.includes('firebase') && (
               <a data-for="all" href="/#" data-tip="Firebase" data-iscapture="true">
                 <Hexagon
                   style={{ stroke: "white" }}
@@ -59,7 +59,7 @@ export default function ProjectCard({ project = {}, isProfessional=false }) {
                 />
               </a>
             )}
-            {project.tech.includes("react") && (
+            {project.tech.includes('react') && (
               <a data-for="all" href="/#" data-tip="React" data-iscapture="true">
                 <Hexagon
                   style={{ stroke: "white" }}
@@ -109,5 +109,5 @@ export default function ProjectCard({ project = {}, isProfessional=false }) {
         multiline={true}
       />
     </div>
-  );
+  )
 }

@@ -1,16 +1,17 @@
-import React from "react";
-import Hexagon from "react-hexagon";
-import Menu from "./Menu";
-import { Popover, OverlayTrigger } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
+import React, {useState} from 'react'
+import Hexagon from 'react-hexagon'
+import Menu from './Menu'
+import { Popover, OverlayTrigger } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
 
 export default function Skills({ handleResume, handleContact }) {
-  const [skill, setSkill] = React.useState({
-    skillName: "Kotlin",
+  
+  const [skill, setSkill] = useState({
+    skillName: 'Kotlin',
     proficiency: 4.5,
-    projects: ["Parts Visibility", "VPM"],
-  });
+    projects: ['Parts Visibility', 'VPM'],
+  })
 
   const popover = (
     <Popover id="popover-basic" className="pop">
@@ -65,7 +66,7 @@ export default function Skills({ handleResume, handleContact }) {
           </div>
         </div>
 
-        <div className="bold">Projects:&nbsp;</div>
+        <div className="bold">Projects:&nbsp</div>
         <ul>
           {skill.projects.map((project, index) => (
             <li key={index}>{project}</li>
@@ -73,7 +74,7 @@ export default function Skills({ handleResume, handleContact }) {
         </ul>
       </Popover.Content>
     </Popover>
-  );
+  )
 
   return (
     <>
@@ -94,10 +95,10 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "Kotlin",
+                      skillName: 'Kotlin',
                       proficiency: 4,
-                      projects: ["Parts Visibility", "VPM"],
-                    });
+                      projects: ['Parts Visibility', 'VPM'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -115,10 +116,10 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "Java",
+                      skillName: 'Java',
                       proficiency: 4.5,
-                      projects: ["LM Wisdom"],
-                    });
+                      projects: ['LM Wisdom'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -136,10 +137,10 @@ export default function Skills({ handleResume, handleContact }) {
                   rootClose={true}
                   onEnter={() => {
                     setSkill({
-                      skillName: "Python",
+                      skillName: 'Python',
                       proficiency: 4.5,
-                      projects: ["MSPi"],
-                    });
+                      projects: ['MSPi'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -157,10 +158,10 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "NodeJS",
+                      skillName: 'NodeJS',
                       proficiency: 4,
-                      projects: ["HackGile", "VPM"],
-                    });
+                      projects: ['HackGile', 'VPM'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -178,10 +179,10 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "Spring Boot",
+                      skillName: 'Spring Boot',
                       proficiency: 3.5,
-                      projects: ["Parts Visibility", "VPM"],
-                    });
+                      projects: ['Parts Visibility', 'VPM'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -203,17 +204,17 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "Java Script",
+                      skillName: 'Java Script',
                       proficiency: 4.5,
                       projects: [
-                        "Parts Visibility",
-                        "VPM",
-                        "HackGile",
-                        "MSPi",
-                        "HackGile+",
-                        "LM Wisdom",
+                        'Parts Visibility',
+                        'VPM',
+                        'HackGile',
+                        'MSPi',
+                        'HackGile+',
+                        'LM Wisdom',
                       ],
-                    });
+                    })
                   }}
                 >
                   <Hexagon
@@ -231,10 +232,10 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "VueJS",
+                      skillName: 'VueJS',
                       proficiency: 4,
-                      projects: ["HackGile", "MSPi"],
-                    });
+                      projects: ['HackGile', 'MSPi'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -252,15 +253,15 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "ReactJS",
+                      skillName: 'ReactJS',
                       proficiency: 4.5,
                       projects: [
-                        "HackGile+",
-                        "Parts Visibility",
-                        "Interactive Resume",
-                        "VPM",
+                        'HackGile+',
+                        'Parts Visibility',
+                        'Interactive Resume',
+                        'VPM',
                       ],
-                    });
+                    })
                   }}
                 >
                   <Hexagon
@@ -278,14 +279,14 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "Jest",
+                      skillName: 'Jest',
                       proficiency: 4,
                       projects: [
-                        "Parts Visibility",
-                        "VPM",
-                        "Interactive Resume",
+                        'Parts Visibility',
+                        'VPM',
+                        'Interactive Resume',
                       ],
-                    });
+                    })
                   }}
                 >
                   <Hexagon
@@ -303,14 +304,14 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "Enzyme",
+                      skillName: 'Enzyme',
                       proficiency: 4,
                       projects: [
-                        "Parts Visibility",
-                        "VPM",
-                        "Interactive Resume",
+                        'Parts Visibility',
+                        'VPM',
+                        'Interactive Resume',
                       ],
-                    });
+                    })
                   }}
                 >
                   <Hexagon
@@ -334,10 +335,10 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "JUnit",
+                      skillName: 'JUnit',
                       proficiency: 4,
-                      projects: ["LM Wisdom", "Parts Visibility", "VPM"],
-                    });
+                      projects: ['LM Wisdom', 'Parts Visibility', 'VPM'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -355,10 +356,10 @@ export default function Skills({ handleResume, handleContact }) {
                   rootClose={true}
                   onEnter={() => {
                     setSkill({
-                      skillName: "FireBase",
+                      skillName: 'FireBase',
                       proficiency: 4.5,
-                      projects: ["MSPi", "HackGile+", "Interactive Resume"],
-                    });
+                      projects: ['MSPi', 'HackGile+', 'Interactive Resume'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -376,10 +377,10 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "MySQL",
+                      skillName: 'MySQL',
                       proficiency: 4.5,
-                      projects: ["Parts Visibility", "VPM"],
-                    });
+                      projects: ['Parts Visibility', 'VPM'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -397,10 +398,10 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: "MongoDB",
+                      skillName: 'MongoDB',
                       proficiency: 4,
-                      projects: ["HackGile"],
-                    });
+                      projects: ['HackGile'],
+                    })
                   }}
                 >
                   <Hexagon
@@ -415,10 +416,14 @@ export default function Skills({ handleResume, handleContact }) {
           </div>
 
           <div className="col-3">
-            <Menu selected="skills" handleResume={handleResume} handleContact={handleContact} />
+            <Menu
+              selected="skills"
+              handleResume={handleResume}
+              handleContact={handleContact}
+            />
           </div>
         </div>
       </div>
     </>
-  );
+  )
 }

@@ -9,14 +9,12 @@ import Experience from './components/Experience'
 import { Element } from 'react-scroll'
 
 function App() {
-  
+
   const [isContactOpen, setIsContactOpen] = useState(false)
   const [isResumeOpen, setIsResumeOpen] = useState(false)
   const [isFirstTime, setIsFirstTime] = useState(true)
 
-  const handleContact = () => {
-    setIsContactOpen(!isContactOpen)
-  }
+  const handleContact = () => setIsContactOpen(!isContactOpen) 
 
   const handleResume = () => {
     isFirstTime ? console.log("Good Choice 😀") : console.log()
@@ -41,19 +39,28 @@ function App() {
       {!isContactOpen && isResumeOpen && (
         <div>
           <Element name="education">
-            <Education handleResume={handleResume} handleContact={handleContact}/>
+            <Education
+              handleResume={handleResume}
+              handleContact={handleContact}
+            />
           </Element>
 
           <Element name="projects">
-            <Projects  handleResume={handleResume} handleContact={handleContact}/>
+            <Projects
+              handleResume={handleResume}
+              handleContact={handleContact}
+            />
           </Element>
 
           <Element name="skills">
-            <Skills handleResume={handleResume} handleContact={handleContact}/>
+            <Skills handleResume={handleResume} handleContact={handleContact} />
           </Element>
 
-          <Element name="experience" >
-            <Experience  handleResume={handleResume} handleContact={handleContact}/>
+          <Element name="experience">
+            <Experience
+              handleResume={handleResume}
+              handleContact={handleContact}
+            />
           </Element>
         </div>
       )}

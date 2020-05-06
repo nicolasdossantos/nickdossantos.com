@@ -1,7 +1,8 @@
-import React from "react";
-import ContactTray from "./ContactTray";
+import React from 'react'
+import ContactTray from './ContactTray'
 
 export default function ContactCard({ handleContact }) {
+  
   return (
     <div id="contactForm" className="container mtl mbl">
       <div className="row">
