@@ -13,7 +13,7 @@ export default function LadingPage({handleResume, isFirstTime}) {
         <Typing>
           <div className="landing-page-text">
             Hi, I'm <span id="name">Nick dos Santos</span>,
-            <Typing.Delay ms={200} />
+            <Typing.Delay ms={500} />
             <br />
             Full Stack Software Engineer
           </div>

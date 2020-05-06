@@ -4,7 +4,7 @@ import Menu from "./Menu";
 
 export default function Education( {handleResume, handleContact} ) {
   return (
-    <div className="App container">
+    <div className="App container ptl">
       <div className="title pbl">Education</div>
       <div className="row body-text pll">
         <div className="col-2 ptd">

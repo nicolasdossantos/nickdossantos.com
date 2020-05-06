@@ -66,7 +66,7 @@ export default function Skills({ handleResume, handleContact }) {
           </div>
         </div>
 
-        <div className="bold">Projects:&nbsp</div>
+        <div className="bold">Projects:</div>
         <ul>
           {skill.projects.map((project, index) => (
             <li key={index}>{project}</li>
@@ -78,8 +78,8 @@ export default function Skills({ handleResume, handleContact }) {
 
   return (
     <>
-      <div className="App container">
-        <div className="title col-9">Skills</div>
+      <div className="App container ptl">
+        <div className="title">Skills</div>
 
         <div className="subtitle">Click the tiles to learn more </div>
 
@@ -204,7 +204,7 @@ export default function Skills({ handleResume, handleContact }) {
                   overlay={popover}
                   onEnter={() => {
                     setSkill({
-                      skillName: 'Java Script',
+                      skillName: 'Javascript',
                       proficiency: 4.5,
                       projects: [
                         'Parts Visibility',

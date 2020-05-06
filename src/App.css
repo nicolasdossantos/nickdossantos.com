@@ -1,11 +1,11 @@
 body {
   background-color: #282c34;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Libre Franklin', sans-serif;
   color:white;
 }
 
 .App {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   color: white;
   background-color: #282c34;
   min-height: 100vh;
@@ -109,21 +109,24 @@ body {
 .mrd {
   margin-right: 15pt;
 }
+.mls {
+  margin-left: 1px;
+}
 
 .mbl {
   margin-bottom: 30pt;
 }
 
 .body-text {
-  font-size: 18pt;
+  font-size: 16.5pt;
 }
 
 .title {
-  font-size: 40pt;
+  font-size: 38pt;
 }
 
 .subtitle {
-  font-size: 25pt;
+  font-size: 20pt;
 }
 .bold {
   font-weight: bold;
@@ -198,9 +201,13 @@ body {
   background-color: #282c34 !important;
 }
 
+.projectCardTitle {
+  font-size: 16.5pt;
+}
+
 .popOverTitle{
   color: white;
-  background-color:#6C757D
+  background-color:#3C4348;
 }
 
 .popOverBody {
@@ -213,6 +220,7 @@ body {
 }
 .pop {
   width: 250px;
+  background-color: #3C4348;
   
 }
 

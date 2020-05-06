@@ -7,11 +7,11 @@ export default function ProjectCard({ project = {}, isProfessional=false }) {
     <div className="projectCard">
       <div
         className="card"
-        style={{ backgroundColor: "#6C757D", width: "16rem" }}
+        style={{ backgroundColor: "#3C4348", width: "16rem" }}
       >
         <div className="card-body">
           <div className="row">
-            <h4 className="card-title bold col-7">{project.name}</h4>
+            <div className="projectCardTitle bold col-7">{project.name}</div>
 
             {project.tech.includes('vue') && (
               <a href="/#" data-for="all" data-tip="VueJS" data-iscapture="true">
@@ -80,7 +80,7 @@ export default function ProjectCard({ project = {}, isProfessional=false }) {
           <h5 className="card-title bold">{project.role}</h5>
           <p className="card-text">{project.roleDescription}</p>
             {!isProfessional &&
-              <div className="row">
+              <div className="row mls">
                 <button className="btn btn-outline-light text-black body-text-small bold mbs mrd ">
                   Website
                 </button>

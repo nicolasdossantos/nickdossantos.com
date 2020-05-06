@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard'
 export default function Projects({ handleResume, handleContact }) {
   let hackgile = {
     name: 'HackGile',
-    shortDescription: 'Agile Project Manager for Hackathons and School Projects',
+    shortDescription: 'Agile Project Manager Tool for Hackathons and School Projects',
     image: 'hackgile.jpg',
     imageAlt: 'HackGileImage',
     role: 'Co-Creator',
@@ -14,18 +14,18 @@ export default function Projects({ handleResume, handleContact }) {
   }
   let mspi = {
     name: 'MSPi',
-    shortDescription: 'A Raspberry Pi smart security camera',
+    shortDescription: 'A Raspberry Pi Smart Security Camera With Computer Vision Features',
     image: 'mspi.jpg',
     imageAlt: 'mspiImage',
     role: 'Co-Creator',
     roleDescription:
-      'Lead Python embedded system developer, computer vision focused',
+      'Python developer, computer vision focused',
     tech: ['python', 'vue', 'firebase'],
   }
   let hackgile3 = {
     name: 'HackGile+',
     shortDescription:
-      'Agile Project Manager for Hackathons and School Projects',
+      'Agile Project Manager Tool for Hackathons and School Projects',
     image: 'hg3.jpg',
     imageAlt: 'hackgile',
     role: 'Co-Creator',
@@ -33,7 +33,7 @@ export default function Projects({ handleResume, handleContact }) {
     tech: ['react', 'firebase'],
   }
   return (
-    <div className="App container">
+    <div className="App container ptl">
       <div className="title">Side Projects</div>
       <div className="subtitle">
         Here are some projects I have developed in my spare time
