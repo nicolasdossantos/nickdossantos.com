@@ -1,11 +1,133 @@
 import React from "react";
 import Hexagon from "react-hexagon";
 import Menu from "./Menu";
+import { Typography, Grid, Box, List, ListItem } from "@material-ui/core";
+import { makeStyles } from '@material-ui/core'
+import NavigationBar from "./NavigationBar";
 
-export default function Education( {handleResume, handleContact} ) {
-  return (
-    <div className="App container ptl">
-      <div className="title pbl">Education</div>
+export default function Education({ handleResume, handleContact }) {
+	const classes = useStyles()
+
+	return (
+		<div className={classes.education}>
+			{/* <Box display={{ xs: 'none', sm: 'block'}}>
+				<Grid container>
+					<Grid item xs={12} className={classes.header}>
+						<Typography  variant="h2">Education</Typography>
+					</Grid>
+				</Grid>
+			</Box> */}
+			{/* <Box display={{ xs: 'block', sm: 'none'}}> */}
+
+			{/* </Box> */}
+
+
+
+			<Grid container>
+				<Grid item xs={4}>
+					<Hexagon
+						style={{
+							stroke: "white",
+							strokeWidth: "5"
+						}}
+						backgroundImage="/tu.jpg"
+						className={classes.hexagon}
+					/>
+				</Grid>
+				<Grid item xs={8} className={classes.textHeader}>
+					<List disablePadding>
+						<ListItem ><Typography variant="h3">Temple University</Typography></ListItem>
+						<ListItem className={classes.indented}><Typography variant="h5">College of Science and Technology</Typography></ListItem>
+						<ListItem className={classes.indented}><Typography variant="h5">Bachelor of Science: Computer Science</Typography></ListItem>
+						<ListItem className={classes.indented}><Typography variant="h5">3.80 GPA (Cum Laude) | Dean's List</Typography></ListItem>
+					</List>
+				</Grid>
+
+
+
+			</Grid>
+
+			<Grid container>
+				<Grid item xs={12} className={classes.relevantCourseText}>
+					<Typography variant="h3">Relevant Coursework</Typography>
+				</Grid>
+				<Grid container style={{paddingLeft:'60px', paddingTop: '10px'}}>
+				<Grid item xs={4}>
+					<List disablePadding>
+						<ListItem ><Typography variant="h5">Java I and II</Typography></ListItem>
+						<ListItem ><Typography variant="h5">Web Application Dev</Typography></ListItem>
+						<ListItem ><Typography variant="h5">Mobile Application Dev</Typography></ListItem>
+					</List>
+				</Grid>
+
+				<Grid item xs={4}>
+					<List disablePadding>
+						<ListItem ><Typography variant="h5">Computer Systems</Typography></ListItem>
+						<ListItem ><Typography variant="h5">Systems Programing</Typography></ListItem>
+						<ListItem ><Typography variant="h5">Computer Architecture</Typography></ListItem>
+					</List>
+				</Grid>
+
+				<Grid item xs={4}>
+					<List disablePadding>
+						<ListItem ><Typography variant="h5">Database Management</Typography></ListItem>
+						<ListItem ><Typography variant="h5">Discrete Math I, II, and III</Typography></ListItem>
+						<ListItem ><Typography variant="h5">Data Structures and Algorithms</Typography></ListItem>
+					</List>
+				</Grid>
+				</Grid>
+
+
+
+			</Grid>
+
+		
+		</div>
+
+
+
+
+
+	)
+}
+
+const useStyles = makeStyles((theme) => ({
+	"@global": {
+		html: {
+			[theme.breakpoints.down("xs")]: {
+				fontSize: '10px'
+			}
+		}
+	},
+	education: {
+		minHeight: '100vh'
+	},
+	header: {
+		paddingTop: '20px',
+		paddingLeft: '20px'
+	},
+	hexagon: {
+		width: '90%',
+		paddingTop: '60px',
+		paddingLeft: ' 60px'
+	},
+	indented: {
+		// paddingLeft: '50px'
+	},
+	textHeader: {
+		paddingTop: '160px',
+		paddingLeft: '80px'
+	},
+	relevantCourseText : {
+		paddingTop: '60px',
+		paddingLeft: '60px'
+	}
+
+}));
+
+
+
+{/* <div className="title pbl">Education</div>
       <div className="row body-text pll">
         <div className="col-2 ptd">
           <Hexagon
@@ -23,7 +145,7 @@ export default function Education( {handleResume, handleContact} ) {
           <ul>
             <li>Temple University - College of Science and Technology</li>
             <li>Bachelor of Science: Computer Science</li>
-            <li>3.79 GPA (Cum Laude) | Dean's List</li>
+            <li>3.80 GPA (Cum Laude) | Dean's List</li>
           </ul>
         </div>
         <div className="col-3">
@@ -55,7 +177,5 @@ export default function Education( {handleResume, handleContact} ) {
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-  );
-}
+	  </div> */}
+

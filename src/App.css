@@ -113,12 +113,17 @@ body {
   margin-left: 1px;
 }
 
+.phl {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
 .mbl {
   margin-bottom: 30pt;
 }
 
 .body-text {
-  font-size: 16.5pt;
+  font-size: 16pt;
 }
 
 .title {
@@ -133,11 +138,11 @@ body {
 }
 
 .menu {
-  padding: 15pt;
+  padding: 30px;
   color: #AAAFB4;
-  font-size: 18pt;
   border: white solid 1pt;
   width: fit-content;
+  font-size: 1.5rem;
 }
 
 #findMore {

@@ -1,29 +1,67 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles';
+import { Avatar, Grid, Typography, Button } from '@material-ui/core'
 import Typing from 'react-typing-animation'
 import ContactTray from './ContactTray'
-import { Link } from 'react-scroll'
 
-export default function LadingPage({handleResume, isFirstTime}) {
+export default function LadingPage({ handleResume, isFirstTime }) {
+    const classes = useStyles()
+    return (
+        <Grid container
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justify="center"
+            className={classes.landing}>
+            <ContactTray />
 
-  return (
-    <div className="App">
-      <ContactTray />
-      <header className="landing-page">
-        <img id="profile-pic" alt="profile" src="Nicolas.jpg" />
-        <Typing>
-          <div className="landing-page-text">
-            Hi, I'm <span id="name">Nick dos Santos</span>,
-            <Typing.Delay ms={500} />
-            <br />
-            Full Stack Software Engineer
-          </div>
-        </Typing>
-        <Link to="education" spy={true} smooth={true}  duration={400}>
-          <button className="btn btn-outline-secondary text-white body-text bold float-right" onClick={handleResume}>
-            {isFirstTime ? "Go to Interactive Resume" : "Back to Interactive Resume"}
-          </button>
-        </Link>
-      </header>
-    </div>
-  );
+            <Grid item style={{ marginTop: '100px' }} xs={12} >
+                <Avatar alt="Nicolas dos Santos" src="Nicolas.jpg" className={classes.avatar} />
+            </Grid>
+            <Grid item className={classes.text} xs={12}>
+                <Typing>
+                    <Typography variant='h3' align='center'>Hi, I'm <span id="name">Nick dos Santos</span>,
+                            <Typing.Delay ms={500} />
+                        <br />
+                                Full Stack Software Engineer
+                        </Typography>
+                </Typing>
+            </Grid>
+            <Grid item xs={12}>
+                <Button variant="contained" onClick={handleResume} className={classes.button}><Typography variant='h6'>Go To Interactive Resume</Typography></Button>
+            </Grid>
+
+
+        </Grid>
+    );
 }
+const useStyles = makeStyles((theme) => ({
+    "@global": {
+        html: {
+            [theme.breakpoints.down("xs")]: {
+                fontSize: '10px'
+            }
+        }
+    },
+    landing: {
+        minHeight: '100vh'
+    },
+    avatar: {
+
+        width: '50%',
+        height: 'auto',
+
+        left: '25%',
+
+    },
+    text: {
+        paddingTop: '15px'
+    },
+    button: {
+        marginTop: '15px',
+        backgroundColor: '#3C4348',
+        color: 'white',
+        padding: '15px'
+
+    }
+}));

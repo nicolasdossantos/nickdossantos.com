@@ -7,8 +7,11 @@ import {
   faTasks,
   faUniversity,
   faWindowClose,
+  faDownload
+
 } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-scroll'
+import { Typography, Grid } from '@material-ui/core'
 
 export default function Menu({
   selected = '',
@@ -17,7 +20,7 @@ export default function Menu({
   handleResume,
 }) {
   return (
-    <div className="menu container">
+    <div className="menu container" style={{ position: 'sticky', top: '145px' }}>
       <Link to="education" spy={true} smooth={true} duration={500}>
         <div
           className={
@@ -26,8 +29,14 @@ export default function Menu({
               : "pbs menuItem pointer"
           }
         >
-          <FontAwesomeIcon className="icon" icon={faUniversity} />
-          Education
+        <Grid container spacing={1}>
+            <Grid item>
+              <FontAwesomeIcon className="icon" icon={faUniversity} />
+            </Grid>
+            <Grid item>
+              <Typography variant="h5">Education</Typography>
+            </Grid>
+          </Grid>
         </div>
       </Link>
       <Link to="projects" spy={true} smooth={true} duration={500}>
@@ -38,8 +47,14 @@ export default function Menu({
               : "pbs menuItem pointer"
           }
         >
-          <FontAwesomeIcon className="icon" icon={faTasks} />
-          Projects
+          <Grid container spacing={1}>
+            <Grid item>
+              <FontAwesomeIcon className="icon" icon={faTasks} />
+            </Grid>
+            <Grid item>
+              <Typography variant="h5">Projects</Typography>
+            </Grid>
+          </Grid>
         </div>
       </Link>
       <Link to="skills" spy={true} smooth={true} duration={500}>
@@ -50,8 +65,14 @@ export default function Menu({
               : "pbs menuItem pointer"
           }
         >
-          <FontAwesomeIcon className="icon" icon={faKeyboard} />
-          Technical Skills
+         <Grid container spacing={1}>
+            <Grid item>
+              <FontAwesomeIcon className="icon" icon={faKeyboard} />
+            </Grid>
+            <Grid item>
+              <Typography variant="h5">Technical Skills</Typography>
+            </Grid>
+          </Grid>
         </div>
       </Link>
       <Link to="experience" spy={true} smooth={true} duration={500}>
@@ -62,8 +83,14 @@ export default function Menu({
               : "pbs menuItem pointer"
           }
         >
-          <FontAwesomeIcon className="icon" icon={faUserTie} />
-          Experience
+          <Grid container spacing={1}>
+            <Grid item>
+              <FontAwesomeIcon className="icon" icon={faUserTie} />
+            </Grid>
+            <Grid item>
+              <Typography variant="h5">Experience</Typography>
+            </Grid>
+          </Grid>
         </div>
       </Link>
 
@@ -75,8 +102,31 @@ export default function Menu({
             : "menuItem pbs pointer"
         }
       >
-        <FontAwesomeIcon className="icon" icon={faEnvelopeOpen} />
-        Contact
+       <Grid container spacing={1}>
+            <Grid item>
+              <FontAwesomeIcon className="icon" icon={faDownload} />
+            </Grid>
+            <Grid item>
+              <Typography variant="h5">Download PDF</Typography>
+            </Grid>
+          </Grid>
+      </div>
+      <div
+        onClick={handleContact}
+        className={
+          selected === "download"
+            ? "pbs selected pointer"
+            : "menuItem pbs pointer"
+        }
+      >
+       <Grid container spacing={1}>
+            <Grid item>
+              <FontAwesomeIcon className="icon" icon={faEnvelopeOpen} />
+            </Grid>
+            <Grid item>
+              <Typography variant="h5">Contact</Typography>
+            </Grid>
+          </Grid>
       </div>
       <div
         onClick={handleResume}
@@ -86,8 +136,14 @@ export default function Menu({
             : "pbs menuItem pointer"
         }
       >
-        <FontAwesomeIcon className="icon" icon={faWindowClose} />
-        Close Resume
+        <Grid container spacing={1}>
+            <Grid item>
+              <FontAwesomeIcon className="icon" icon={faWindowClose} />
+            </Grid>
+            <Grid item>
+              <Typography variant="h5">Close Resume</Typography>
+            </Grid>
+          </Grid>
       </div>
     </div>
   )
