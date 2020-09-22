@@ -24,7 +24,7 @@ export default function Education({ handleResume, handleContact }) {
 
 
 			<Grid container>
-				<Grid item xs={4}>
+				<Grid item xs={3}>
 					<Hexagon
 						style={{
 							stroke: "white",
@@ -34,12 +34,11 @@ export default function Education({ handleResume, handleContact }) {
 						className={classes.hexagon}
 					/>
 				</Grid>
-				<Grid item xs={8} className={classes.textHeader}>
+				<Grid item xs={9} className={classes.textHeader}>
 					<List disablePadding>
-						<ListItem ><Typography variant="h3">Temple University</Typography></ListItem>
-						<ListItem className={classes.indented}><Typography variant="h5">College of Science and Technology</Typography></ListItem>
-						<ListItem className={classes.indented}><Typography variant="h5">Bachelor of Science: Computer Science</Typography></ListItem>
-						<ListItem className={classes.indented}><Typography variant="h5">3.80 GPA (Cum Laude) | Dean's List</Typography></ListItem>
+						<ListItem ><Typography variant="h3">Bachelor of Science: Computer Science</Typography></ListItem>
+						<ListItem className={classes.indented}><Typography variant="h4">Temple University - College of Science and Technology</Typography></ListItem>
+						<ListItem className={classes.indented}><Typography variant="h4">3.80 GPA (Cum Laude) | Dean's List</Typography></ListItem>
 					</List>
 				</Grid>
 
@@ -107,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
 		paddingLeft: '20px'
 	},
 	hexagon: {
-		width: '90%',
+		width: '100%',
 		paddingTop: '60px',
 		paddingLeft: ' 60px'
 	},
@@ -115,8 +114,8 @@ const useStyles = makeStyles((theme) => ({
 		// paddingLeft: '50px'
 	},
 	textHeader: {
-		paddingTop: '160px',
-		paddingLeft: '80px'
+		paddingTop: '140px',
+		paddingLeft: '40px'
 	},
 	relevantCourseText : {
 		paddingTop: '60px',
